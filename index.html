@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        background: linear-gradient(to top, rgb(250, 217, 125),rgb(255, 255, 255) );
+    }
+    #btn {
+        width: 300px;
+        height: 50px;
+        font-size: 1.5em;
+        margin-bottom:10px;
+        background: rgb(42, 146, 1);
+        border: solid 2px rgb(163, 1, 1);
+        cursor: pointer;
+    }
+    #score {
+        width: 300px;
+        height: 200px;
+        background: rgb(1, 15, 139);
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        font-size: 6em;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>今日のラーキーナンバー</h1>
+    <button id="btn" click="btn1()">スタートボタン</button>
+    <div id="score"></div>
+    <script>
+    var b = document.getElementById("btn");
+    b.addEventListener("click",function(){
+    var x = Math.random();
+    x = x * 9;
+    x = Math.floor(x);
+    x = x + 1;
+    var y = document.getElementById("score");
+    y.innerHTML = x;
+    });
+    </script>
+</body>
+</html>
